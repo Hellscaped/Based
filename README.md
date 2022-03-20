@@ -1,2 +1,36 @@
 # Based
-A python module that gets rid of the need for an external database like MySql.
+---
+
+This is based, a python package to get rid of the need to use external database programs like MySql
+
+How to use:
+---
+Writing Keys:
+```py
+import Based
+
+Database = Based("Lipsum")
+Lipsum = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
+Database.write("Lipsum",Lipsum)
+```
+Reading Keys:
+```py
+import Based
+
+Database = Based("Lipsum")
+Lipsum = Database.get("Lipsum")
+```
+Deleting Keys:
+```py
+import Based
+
+Database = Based("Lipsum")
+Lipsum = Database.delete("Lipsum")
+```
+Wiping the Database:
+```py
+import Based
+
+Database = Based("Lipsum")
+Lipsum = Database.nuke()
+```
