@@ -1,7 +1,7 @@
 # Based
 ---
 
-This is based, a python package to get rid of the need to use external database programs like MySql
+This is based, a python package that makes using json databases easy.
 
 How to use:
 ---
