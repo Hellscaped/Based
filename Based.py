@@ -22,21 +22,8 @@ class Based:
       return self.db
     
     else:
-      
-      try:
-        
-        return self.db[key]
-      
-      except:
-        
-        if key == "":
-          
-          raise NameError("Cannot get blank key.")
-          
-        else:
-          
-          raise NameError(f"Key '{key}' not found.")
-          
+      return self.db[key]
+    
   def write(self, key,value):
     
     self.db[key] = value
