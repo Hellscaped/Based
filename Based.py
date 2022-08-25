@@ -45,3 +45,12 @@ class Based:
   def delete(self,key):
     
     self.db[key] = None
+  def __getitem__(self, key=None):
+    if key == None:
+      return self.db
+    if key in self.db:
+      return self.db[key]
+    else:
+      return None
+  def __setitem__(self,key,value):
+    self.db[key] = value
