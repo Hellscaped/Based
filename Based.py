@@ -23,6 +23,8 @@ class Based:
     
     else:
       return self.db[key]
+  def dict(self):
+    return self.db
     
   def write(self, key,value):
     
@@ -45,6 +47,7 @@ class Based:
   def delete(self,key):
     
     self.db[key] = None
+    self.save()
   def __getitem__(self, key=None):
     if key == None:
       return self.db
@@ -54,3 +57,11 @@ class Based:
       return None
   def __setitem__(self,key,value):
     self.db[key] = value
+    self.save()
+  def __delitem__(self,key):
+    del self.db[key]
+    self.save()
+  def __iter__(self):
+    return self.db.__iter__()
+  def __contains__(self,key):
+    return key in self.db
